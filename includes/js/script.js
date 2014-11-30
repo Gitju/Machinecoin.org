@@ -27,7 +27,7 @@ $(function() {
 
 
     function load() {
-        $('#getblocknumber').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/getblockcount', 
+        $('#getblocknumber').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/getblockcount?callback=?', 
           function (responseText, textStatus, XMLHttpRequest) {
             if (textStatus == 'success') {
                  // all good!
@@ -37,7 +37,7 @@ $(function() {
             }
           });   
 
-        $('#getdifficulty').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/getdifficulty', 
+        $('#getdifficulty').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/getdifficulty?callback=?', 
           function (responseText, textStatus, XMLHttpRequest) {
             if (textStatus == 'success') {
                  // all good!
@@ -47,7 +47,7 @@ $(function() {
             }
           });   
 
-        $('#getcoins').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/totalbc', 
+        $('#getcoins').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/totalbc?callback=?', 
           function (responseText, textStatus, XMLHttpRequest) {
             if (textStatus == 'success') {
                  // all good!
