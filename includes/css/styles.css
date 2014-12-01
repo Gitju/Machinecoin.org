@@ -38,6 +38,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	position: relative;
+	padding-top: 70px;
+	padding-bottom: 70px;
 }
 
 .well .page-header {
@@ -56,9 +58,6 @@ body {
     Carousel
     ------------------------------------ */
 
-#myCarousel{
-	margin-top: 50px;
-}
 
 .carousel-caption {
 	font-size: 24px;
