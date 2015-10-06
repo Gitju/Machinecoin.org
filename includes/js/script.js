@@ -4,7 +4,7 @@ My Custom JS
 ============
 
 Author: Jürgen Scholz
-Updated: November 2014
+Updated: October 2015
 Notes: 
 
 */
@@ -24,57 +24,5 @@ $(function() {
             window.location.hash = target;
         });
     });
-
-
-    function load() {
-        $('#getblocknumber').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/getblockcount', 
-          function (responseText, textStatus, XMLHttpRequest) {
-            if (textStatus == 'success') {
-                 // all good!
-            }
-            if (textStatus == 'error') {
-                 // oh noes!
-            }
-          });   
-
-        $('#getdifficulty').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/getdifficulty', 
-          function (responseText, textStatus, XMLHttpRequest) {
-            if (textStatus == 'success') {
-                 // all good!
-            }
-            if (textStatus == 'error') {
-                 // oh noes!
-            }
-          });   
-
-        $('#getcoins').load('http://blockchain.machinecoin.org:8080/chain/Machinecoin/q/totalbc', 
-          function (responseText, textStatus, XMLHttpRequest) {
-            if (textStatus == 'success') {
-                 // all good!
-                $('#getcoins').append(' Machinecoin');
-            }
-            if (textStatus == 'error') {
-                 // oh noes!
-            }
-          }); 
-
-        $.getJSON("https://www.cryptonator.com/api/ticker/mac-btc", function(data){
-            $('#mac-btc-exchangerate').text(data.ticker.price + ' BTC');
-        });
-
-        $.getJSON("https://www.cryptonator.com/api/ticker/mac-eur", function(data){
-            $('#mac-eur-exchangerate').text(data.ticker.price + ' EUR');
-        });
-
-        $.getJSON("https://www.cryptonator.com/api/ticker/mac-usd", function(data){
-            $('#mac-usd-exchangerate').text(data.ticker.price + ' USD');
-        });
-
-    }
-
-
-    load();
-
-    setInterval(load, 60000);
 
 }); 
